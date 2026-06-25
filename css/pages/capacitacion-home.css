@@ -1,0 +1,164 @@
+/* HERO INTERNO */
+.hero-interno {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/img/portada.png') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero-interno .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-interno-content {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-interno-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero-interno-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* INTRO ESCUELA */
+.escuela-intro {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.escuela-intro .container > div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo-escuela {
+    width: 180px;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.escuela-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.escuela-intro p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN ROJO GENERAL */
+.btn-rojo {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #dc3545;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-rojo:hover {
+    background: #b02a37;
+    transform: translateY(-2px);
+}
+
+/* CALENDARIO */
+.agenda-capacitacion {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.calendario-container {
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.calendario-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.titulo-seccion p {
+    color: #666;
+}
+
+/* ÁREAS DE FORMACIÓN */
+.areas-formacion {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.area-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.area-card i {
+    font-size: 2.5rem;
+    color: #dc3545;
+    margin-bottom: 15px;
+}
+
+.area-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero-interno-content h1 {
+        font-size: 2rem;
+    }
+
+    .escuela-intro .container > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .calendario-container iframe {
+        height: 400px;
+    }
+}
