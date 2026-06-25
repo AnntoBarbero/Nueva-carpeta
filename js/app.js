@@ -9,14 +9,14 @@ async function cargarComponentes() {
             enPaginaInterna ? "../components/" : "components/";
 
         // NAVBAR
-        const navbar = await fetch(rutaBase + "navbar.html");
+        const header = await fetch(rutaBase + "header.html");
 
-        if (!navbar.ok) {
-            throw new Error("Error cargando navbar");
+        if (!header.ok) {
+            throw new Error("Error cargando header");
         }
 
-        document.getElementById("navbar-container").innerHTML =
-            await navbar.text();
+        document.getElementById("header-container").innerHTML =
+            await header.text();
 
         // FOOTER
         const footer = await fetch(rutaBase + "footer.html");
@@ -32,7 +32,7 @@ async function cargarComponentes() {
         iniciarMenu();
 
         // PAGINAS INTERNAS
-        const nav = document.querySelector(".navbar");
+        const nav = document.querySelector(".header");
 
         const esHome =
             window.location.pathname.includes("index.html") ||
@@ -76,20 +76,20 @@ cargarComponentes();
 
 // NAVBAR STICKY
 window.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    if(!navbar) return;
+    const header = document.querySelector(".header");
+    if(!header) return;
     if(window.scrollY > 50){
-        navbar.classList.add("scrolled");
+        header.classList.add("scrolled");
     }else{
-        navbar.classList.remove("scrolled");
+        header.classList.remove("scrolled");
     }
 });
 
 // DETECTAR PAGINAS INTERNAS
 window.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
+    const header = document.querySelector(".header");
     const esHome = window.location.pathname.endsWith("/") || window.location.pathname.endsWith("index.html");
     if(!esHome){
-        navbar.classList.add("interno");
+        header.classList.add("interno");
     }
 });
