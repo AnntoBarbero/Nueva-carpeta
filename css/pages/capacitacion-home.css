@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../img/portada.png') center/cover no-repeat;
+    background: url('./img/portada.png') center/cover no-repeat;
     color: #fff;
 }
 
